@@ -34,6 +34,7 @@
     flex: 1 1 auto
     text-transform: uppercase
     font-size: 18px
+    letter-spacing: .2em
     ul
       display: flex
       list-style: none
@@ -83,6 +84,12 @@
       margin-left: 10px
       font-size: 48px
 
+@media($wide)
+  .header
+    &__navi
+      font-size: 16px
+      li
+        margin-left: 3.5%
 @media($desktop)
   .header
     &__logo
@@ -91,7 +98,8 @@
     &__navi
       margin-left: 0
       padding-left: 30px
-      font-size: 16px
+      font-size: 15px
+      letter-spacing: .01em
       li
         margin-left: 2.5%
 @media($tablet)
@@ -243,6 +251,7 @@
   &__newsleter
     &__title
       font-size: 24px
+      letter-spacing: .25em
       line-height: 1
       span
         display: block
@@ -263,6 +272,7 @@
   &__copy
     text-transform: uppercase
     font-size: 12px
+    letter-spacing: .15em
   &__secondaryLinks
     display: flex
     justify-content: space-between
@@ -295,6 +305,9 @@
       margin-right: 50px
     &__secondaryLinks
       font-size: 12px
+    &__copy
+      font-size: 11px
+      letter-spacing: .05em
 
 @media($tablet)
   .footer

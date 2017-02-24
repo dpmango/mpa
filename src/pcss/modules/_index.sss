@@ -17,12 +17,14 @@
   &__title
     color: $primaryColor
     font-size: 64px
+    letter-spacing: .16em
     line-height: 1
     text-transform: uppercase
   &__desc
     font-family: 'Uni-Sans-SemiBold'
     color: white
     margin-top: 15px
+    letter-spacing: .1em
     font-size: 35px
     line-height: 1
     text-transform: uppercase
@@ -89,6 +91,7 @@
       margin-left: 0
     &__title
       font-size: 48px
+      letter-spacing: .1em
     &__desc
       font-size: 28px
     .container::after
@@ -102,7 +105,8 @@
     &__wrapper
       padding-top: 40vh
     &__title
-      font-size: 42px
+      font-size: 40px
+      letter-spacing: .05em
     &__desc
       font-size: 24px
     .container::after
@@ -133,6 +137,7 @@
     &__title
       font-size: 32px
       line-height: 1.1
+      letter-spacing: 3.5px
       margin-bottom: 35px
       margin-top: 80px
       position: relative
@@ -150,6 +155,7 @@
   &__ctaText
     font-size: 72px
     line-height: .9
+    letter-spacing: .16em
     color: $colorBlue
   &--green
     background: #52dd3d
@@ -270,6 +276,8 @@
       flex-shrink: 1
       font-size: 400px
       opacity: .7
+    &__ctaText
+      font-size: 53px
     &__image
       flex: 1 0 500px
     &--green
@@ -356,6 +364,7 @@
         &:before
           display: none
       .spacer__description
+        order: 2
         flex: 0 1 80%
         margin-left: auto
         margin-right: auto
@@ -364,6 +373,7 @@
           max-width: 100%
           margin-left: 0
       .spacer__image
+        order: 1
         margin-right: auto
         margin-left: auto
         flex: 0 0 200px
@@ -421,6 +431,7 @@
     &__text
       margin-top: 20px
       font-size: 36px
+      letter-spacing: .2em
       color: $primaryColor
       span
         color: $fontColor
@@ -481,6 +492,7 @@
     flex: 1 0 35%
   &__title
     font-size: 42px
+    letter-spacing: .2em
     line-height: 1
     color: $primaryColor
     span
