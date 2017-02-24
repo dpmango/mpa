@@ -19,11 +19,12 @@ $(document).ready(function(){
     loop: true,
     nav: false,
     margin: 0,
+    responsiveRefreshRate: 10,
     responsive: {
       0:{
         items: 1,
       },
-      768:{
+      1024:{
         items: 2,
       }
     }
@@ -35,6 +36,53 @@ $(document).ready(function(){
   $('#owlTestimonialsNext').click(function() {
     owlTestimonials.trigger('next.owl.carousel');
   })
+
+  function initialize(){
+    owlTestimonials.trigger('destroy.owl.carousel');
+    owlTestimonials.owlCarousel({
+      loop: true,
+      nav: false,
+      margin: 0,
+      responsiveRefreshRate: 10,
+      responsive: {
+        0:{
+          items: 1,
+        },
+        1024:{
+          items: 2,
+        }
+      }
+    });
+  }
+
+  var id;
+  $(window).resize( function() {
+    clearTimeout(id);
+    id = setTimeout(initialize, 100);
+  });
+  initialize();
+
+  // Mobile hamburger
+  $('.hamburger').on('click', function(){
+    $(this).toggleClass('is-active');
+    $('.mobile-navi').toggleClass('is-active');
+    $('body').toggleClass('locked');
+  });
+
+
+	$(document).mouseup(function (e) {
+    var container = new Array();
+    container.push($('.mobile-navi'));
+
+    $.each(container, function(key, value) {
+        if (!$(value).is(e.target) && $(value).has(e.target).length === 0) {
+            $(value).removeClass('is-active');
+            $('.hamburger').removeClass('is-active');
+            $('body').removeClass('locked');
+        }
+    });
+  });
+
 
 
 });

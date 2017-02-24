@@ -2,6 +2,12 @@
 header.header.header--absolute
   .container
     .header__wrapper
+      .header__hamburger
+        button.hamburger.hamburger--spin(type='button')
+          span.hamburger-box
+            span.hamburger-inner
+
+
       a(href='#').header__logo
         .icoWrap
           i.ico.ico-logo
@@ -18,7 +24,21 @@ header.header.header--absolute
         li
           a(href='#') CONTACT
 
-      .header__cart
+      a(href="#").header__cart
         .header__cart__name Cart
         .header__cart__line
         .header__cart__counter 2
+
+// MOBILE NAV
+.mobile-navi
+  ul
+    li
+      a(href='#') PRODUCTS
+    li
+      a(href='#') APPAREL
+    li
+      a(href='#') TESTIMONIALS
+    li
+      a(href='#') NEWS
+    li
+      a(href='#') CONTACT
