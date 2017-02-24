@@ -1832,7 +1832,7 @@ body.locked, html.locked {}
 }
 .spacer__lineText {
     position: absolute;
-    right: -150px;
+    right: -138px;
     bottom: 0;
     color: #101511;
     letter-spacing: 3px;
@@ -2082,6 +2082,10 @@ body.locked, html.locked {}
     }
     .spacer--white .spacer__description__title, .spacer--gray .spacer__description__title {
         margin-top: 20px;
+    }
+    .spacer--gray .spacer__image {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
     }
 }
 /* SOCIALS */
