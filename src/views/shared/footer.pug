@@ -1,15 +1,61 @@
 // FOOTER::START
 footer.footer
   .container
-    .row
-      .col-sm-12
+    .footer__cta
+      a(href='#').footer__cta__item
+        i.ico.ico-discount-1
+        .footer__cta__desc MILITARY <br> DISCOUNT <span>GET DISCOUNT</span>
+      a(href='#').footer__cta__item
+        i.ico.ico-discount-2
+        .footer__cta__desc FIRST RESPONDER <br> DISCOUNT <span>GET DISCOUNT</span>
+
+    .footer__wrapper
+      .footer__left
+        i.ico.ico-logo
+
+      .footer__center
+        .footer__links__wrapper
+          .footer__links
+            a(href="#") All Products
+            a(href="#") Blog
+            a(href="#") Store Locator
+            a(href="#") Contact us
+          .footer__links
+            a(href="#") About us
+            a(href="#") MPA Reviews
+            a(href="#") Podcasts
+            a(href="#") Contact Us
+
+      .footer__right
+        .footer__newsleter
+          .footer__newsleter__title NEWSLETTER <span>STAY TUNNED_ </span>
+          form(action="")
+            .ui-input-group
+              input(type='email' required='' placeholder='Your email')
+              button(type='submit' value='GO') GO
+
+    .footer__wrapper
+      .footer__left
+        .footer__copy © 2017 MPA Supps. all rights reserved
+      .footer__center
+        .footer__secondaryLinks
+          a(href='#') Privacy Policy
+          a(href='#') Shipping and Returns
+          a(href='#') Terms and Conditions
+      .footer__right
+        .footer__socials
+          a(href='#')
+            i.ico.ico-youtube
+          a(href='#')
+            i.ico.ico-insta
+          a(href='#')
+            i.ico.ico-fb
+
 
 // SCRIPTS
 
 //build:js js/scripts.min.js
 script(src="components/jquery/dist/jquery.min.js")
-script(src="components/magnific-popup/dist/jquery.magnific-popup.min.js")
 script(src="components/owl.carousel/dist/owl.carousel.min.js")
-script(src="js/libs/jquery.maskedinput.min.js")
 script(src="js/main.js")
 //endbuild

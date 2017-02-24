@@ -21,8 +21,6 @@ var will_change   = require('postcss-will-change');
 var flexbugs      = require('postcss-flexbugs-fixes');
 var cssnano       = require('cssnano');
 var spritesmith   = require('gulp.spritesmith');
-var sass          = require('gulp-sass');
-var sassGlob      = require('gulp-sass-glob');
 var useref        = require('gulp-useref');
 var uglify        = require('gulp-uglify');
 var gulpIf        = require('gulp-if');
@@ -94,29 +92,6 @@ gulp.task('postcss', function() {
       }));
 });
 
-gulp.task('sass', function() {
-  return gulp.src('./src/sass/style.+(scss|sass)')
-      .pipe( sourcemaps.init() )
-      .pipe( sass({ includePaths : ['./src/sass'] }) )
-      .pipe( postcss(processors) )
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('./src/css') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
-
-gulp.task('bootstrap', function() {
-  return gulp.src('./src/sass/bootstrap.+(scss|sass)')
-      .pipe( sourcemaps.init() )
-      .pipe( sass({ includePaths : ['./src/sass'] }) )
-      .pipe( postcss(processors) )
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('./src/css') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
 
 gulp.task('pug', function buildHTML() {
   return gulp.src('./src/views/*.pug')

@@ -3,41 +3,138 @@ html
   include shared/head.pug
 
   body
-    include shared/header.pug
+    .site
+      include shared/header.pug
+      .site__content
+        // HERO :: START
+        .hero
+          .container
+            .hero__wrapper
+              .hero__title PROFESSIONAL <br> PRODUCTS
+              .hero__desc PROFESSIONAL <br> RESULTS
 
-    // SECTION::START
-    section.section
+        // FIRST SPACER :: START
+        .spacer.spacer--green
+          .container
+            .spacer__wrapper
+              .spacer__lettering VS
+              .spacer__description.spacer__description--right
+                .spacer__description__title VASO-SERIES <br> TOPICAL <br> SKIN GELS
+                .spacer__description__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                a(href="#").btn.btn--primary.btn--black VIEW SERIES
+              .spacer__image
+                img(src="images/Vasoseries.png")
 
-    // OWL::START
-    section.owl
-      .container
-        .row
-          .col-sm-12
-            .owl-carousel#owlFirst
-              img(src="http://placehold.it/1200x300")
-              img(src="http://placehold.it/1200x300")
-              img(src="http://placehold.it/1200x300")
+        // SECOND SPACER :: START
+        .spacer.spacer--white
+          .container
+            .spacer__wrapper
+              .spacer__image
+                img(src="images/NEWPG.png")
+              .spacer__lettering PS
+              .spacer__description
+                .spacer__description__title <span>NEW</span> <br> PERI-SERIES <br> SUPPLEMENTS
+                .spacer__description__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                a(href="#").btn.btn--primary.btn--blue VIEW PRODUCT
 
-    // MAGNIFIC::START
-    section.magnific
-      .container
-        .row
-          .col-sm-12
-            .popup-gallery
-              a(href='http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg', title='The Cleaner')
-                img(src='http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg', width='75', height='75')
-              a(href='http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg', title='Winter Dance')
-                img(src='http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg', width='75', height='75')
-              a(href='http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg', title='The Uninvited Guest')
-                img(src='http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_s.jpg', width='75', height='75')
-              a(href='http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg', title='Oh no, not again!')
-                img(src='http://farm9.staticflickr.com/8383/8563475581_df05e9906d_s.jpg', width='75', height='75')
-              a(href='http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg', title='Swan Lake')
-                img(src='http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_s.jpg', width='75', height='75')
-              a(href='http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg', title='The Shake')
-                img(src='http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_s.jpg', width='75', height='75')
-              a(href='http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg', title="Who's that, mommy?")
-                img(src='http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_s.jpg', width='75', height='75')
+        // MID SPACER :: START
+        .speacer.spacer--absolute
+          .container
+            .spacer__wrapper
+              .spacer__image
+                img(src="images/athlete@2x.png")
+              .spacer__ctaText LAB TESTED <br> FORMULATIONS_
 
+        // TRIRD SPACER :: START
+        .spacer.spacer--gray
+          .container
+            .spacer__wrapper
+              .spacer__image
+                img(src="images/NEWPH-CORTSOLVE@2x.png")
+              .spacer__lettering CS
+              .spacer__description
+                .spacer__description__title CORTISOLVE <br> CORTISOL <br> REGULATOR
+                .spacer__description__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                a(href="#").btn.btn--primary.btn--green VIEW PRODUCT
 
-    include shared/footer.pug
+        // SOCIALS :: START
+        .socials
+          .container
+            .socials__wrapper
+              .socials__intro
+                .socials__intro__icons
+                  a(href='#')
+                    i.ico.ico-youtube
+                  a(href='#')
+                    i.ico.ico-insta
+                  a(href='#')
+                    i.ico.ico-fb
+
+                .socials__intro__title SOCIALIZE WITH US
+                .socials__intro__text <span>#MPASUPPS</span> <br> SOCIAL & <br> TRENDS_
+              .socials__pics
+                .socials__pics__wrapper
+                  a(href="#")
+                    img(src="images/social-pic-1@2x.png")
+                  a(href="#")
+                    img(src="images/social-pic-2@2x.png")
+                  a(href="#")
+                    img(src="images/social-pic-3@2x.png")
+
+        // TESTIMONIALS :: START
+        .testimonials
+          .container
+            .testimonials__wrapper
+              .testimonials__left
+                .testimonials__title <span>WHAT PEOPLE</span><br> SAY ABOUT<br> MPA SUPPS
+                .owl-nav
+                  .owl-prev#owlTestimonialsPrev
+                  .owl-next#owlTestimonialsNext
+              .testimonials__right
+                .owl-carousel#owlTestimonials
+                  .testimonials__slide
+                    img(src='images/testimonials-img@2x.png')
+                    .testimonials__slide__content
+                      .testimonials__slide__rating
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+
+                      .testimonials__slide__title LOVE THESE PRODUCTS
+                      .testimonials__slide__review Amazing priduct ive bought both vaso burn and vaso dry both very good. Very satisfied with results and am still currently using du...
+                      .testimonials__slide__author Linda P.
+                      a(href='#').btn.btn--green.btn--primary Read +
+                  //slide
+                  .testimonials__slide
+                    img(src='images/testimonials-img@2x.png')
+                    .testimonials__slide__content
+                      .testimonials__slide__rating
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+
+                      .testimonials__slide__title LOVE THESE PRODUCTS
+                      .testimonials__slide__review Amazing priduct ive bought both vaso burn and vaso dry both very good. Very satisfied with results and am still currently using du...
+                      .testimonials__slide__author Linda P.
+                      a(href='#').btn.btn--green.btn--primary Read +
+                  //slide
+                  .testimonials__slide
+                    img(src='images/testimonials-img@2x.png')
+                    .testimonials__slide__content
+                      .testimonials__slide__rating
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+                        i.ico.ico-star
+
+                      .testimonials__slide__title LOVE THESE PRODUCTS
+                      .testimonials__slide__review Amazing priduct ive bought both vaso burn and vaso dry both very good. Very satisfied with results and am still currently using du...
+                      .testimonials__slide__author Linda P.
+                      a(href='#').btn.btn--green.btn--primary Read +
+
+      include shared/footer.pug

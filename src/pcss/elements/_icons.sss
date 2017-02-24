@@ -3,9 +3,37 @@
   display: inline-block
   font-style: normal
   content: ' '
+  background-repeat: no-repeat
+  background-position: center
+  background-size: contain
+  transition: all .4s ease-in-out
 
-// mixin
-@define-mixin myIcon $name
-  background: url('../images/$(name).svg') no-repeat center
-  width: 1em
-  height: 1em
+
+.ico-logo
+  background-image: url('../images/logo@2x.png')
+  width: 154px
+  height: 58px
+
+.ico-youtube
+  background-image: svg-load('../../images/svg/ico-youtube.svg')
+  size: 30px
+
+.ico-insta
+  background-image: svg-load('../../images/svg/ico-instagram.svg')
+  size: 30px
+
+.ico-fb
+  background-image: svg-load('../../images/svg/ico-facebook.svg')
+  size: 30px
+
+
+.ico-discount-1
+  background-image: url('../images/ico-discount-footer-1@2x.png')
+  size: 52px 37px
+.ico-discount-2
+  background-image: url('../images/ico-discount-footer-2@2x.png')
+  size: 62px 45px
+
+.ico-star
+  background-image: svg-load('../../images/svg/star.svg')
+  size: 17px

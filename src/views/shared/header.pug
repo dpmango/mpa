@@ -1,10 +1,24 @@
 // HEADER::START
-- var list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+header.header.header--absolute
+  .container
+    .header__wrapper
+      a(href='#').header__logo
+        .icoWrap
+          i.ico.ico-logo
 
-header.header
-  .section
-    .row
-      .col-sm-12
-        ul
-          each item in list
-            li= item
+      ul.header__navi
+        li
+          a(href='#') PRODUCTS
+        li
+          a(href='#') APPAREL
+        li
+          a(href='#') TESTIMONIALS
+        li
+          a(href='#') NEWS
+        li
+          a(href='#') CONTACT
+
+      .header__cart
+        .header__cart__name Cart
+        .header__cart__line
+        .header__cart__counter 2

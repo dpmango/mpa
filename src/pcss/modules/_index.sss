@@ -1,0 +1,460 @@
+// INDEX
+
+.header
+  background: transparent
+  color: $primaryColor
+  position: relative
+  &--absolute
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__logo
+    display: block
+    background: $primaryColor
+    flex: 0 0 230px
+    height: 230px
+    transition: background .5s ease
+    &:hover
+      background: color($primaryColor a(80%))
+      .ico
+        transform: scale(1.1)
+    .icoWrap
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+
+  &__navi
+    flex: 1 1 auto
+    text-transform: uppercase
+    font-size: 18px
+    ul
+      display: flex
+      list-style: none
+      padding: 0
+      margin-left: 4%
+    li
+      flex: 1 1 auto
+      margin-left: 5%
+      display: inline-block
+      a
+        transition: all .4s ease-in-out
+        position: relative
+        &::after
+          position: absolute
+          display: block
+          content: ' '
+          bottom: -5px
+          left: 50%
+          right: 50%
+          height: 2px
+          background: $primaryColor
+          transition: all .4s ease-in-out
+
+        &:hover
+          &::after
+            left: 0
+            right: 0
+
+  &__cart
+    flex: 0 0 auto
+    position: relative
+    align-self: baseline
+    margin-top: 30px
+    &__name
+      font-size: 18px
+      transform: rotate(270deg)
+      display: inline-block
+      vertical-align: 10px
+    &__line
+      display: inline-block
+      size: 18px 105px
+      background: $primaryColor
+    &__counter
+      display: inline-block
+      margin-left: 10px
+      font-size: 48px
+
+
+//HERO
+
+.hero
+  height: 100vh
+  min-height: 700px
+  max-height: 1030px
+  background: #0d0d0d url('../images/heroBG.png') no-repeat 85% bottom
+  background-size: contain
+  &__wrapper
+    height: 100vh
+    min-height: 700px
+    max-height: 1030px
+    display: flex
+    flex-direction: column
+    padding-top: 50vh
+    margin-left: 15%
+  &__title
+    color: $primaryColor
+    font-size: 64px
+    line-height: 1
+    text-transform: uppercase
+  &__desc
+    font-family: 'Uni-Sans-SemiBold'
+    color: white
+    margin-top: 15px
+    font-size: 35px
+    line-height: 1
+    text-transform: uppercase
+
+
+// SPACER
+.spacer
+  height: 720px
+  position: relative
+
+  &__wrapper
+    height: 720px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__lettering
+    flex: 1 0 auto
+    font-family: 'Prohibition-LinesOblique'
+    font-size: 490px
+    margin-left: -100px
+    line-height: 1
+  &__description
+    flex: 0 1 auto
+    margin-left: 50px
+    &--right
+      text-align: right
+    &__title
+      font-size: 32px
+      line-height: 1.1
+      margin-bottom: 35px
+      margin-top: 80px
+    &__text
+      font-size: 16px
+      line-height: 23px
+      margin-bottom: 20px
+  &__image
+    flex: 0 0 auto
+    flex-basis: 500px
+    margin-left: -50px
+    img
+      max-width: 100%
+  &__ctaText
+    font-size: 72px
+    line-height: .9
+    color: $colorBlue
+
+
+  &--green
+    background: #52dd3d
+    .spacer__lettering
+      color: white
+      margin-right: 5%
+      margin-left: 0
+      position: relative
+      &::before
+        position: absolute
+        display: block
+        content: ' '
+        top: 22%
+        left: 10px
+        background: white
+        size: 20px 80px
+    .spacer__description
+      flex: 0 1 25%
+      margin-left: 0
+    .spacer__image
+      margin-left: 5%
+      flex: 0 1 300px
+
+  &--white
+    background: white
+    .spacer__lettering
+      color: $colorBlue
+    .spacer__description__title
+      span
+        color: $colorBlue
+  &--gray
+    background: #efefef
+    .spacer__lettering
+      color: $primaryColor
+
+  &--absolute
+    position: relative
+    height: auto
+    top: -400px
+    height: 340px
+    z-index: 2
+    text-align: center
+    .spacer__wrapper
+      flex-direction: column
+    .spacer__ctaText
+      margin-top: -400px
+      text-align: left
+    .spacer__wrapper
+      height: auto
+    .spacer__image
+      flex: 1
+      margin-left: 10%
+      img
+        max-width: 600px
+
+
+// SOCIALS
+.socials
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-top: 110px
+    margin-bottom: 110px
+    position: relative
+    &::before
+      position: absolute
+      display: block
+      content: ' '
+      size: 25px 190px
+      background: $primaryColor
+      top: -160px
+      left: 0px
+  &__intro
+    flex: 1 1 25%
+    text-transform: uppercase
+    &__icons
+      margin-bottom: 15px
+      .ico
+        margin-right: 25px
+
+    &__title
+      font-size: 16px
+      color: $primaryColor
+    &__text
+      margin-top: 20px
+      font-size: 36px
+      color: $primaryColor
+      span
+        color: $fontColor
+
+  &__pics
+    flex: 1 1 75%
+    font-size: 0
+    &__wrapper
+      display: flex
+    img
+      flex: 1 1 33%
+      max-width: 100%
+
+
+// TESTIMONIALS
+.testimonials
+  padding: 80px 0
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    overflow: hidden
+
+  &__left
+    flex: 1 0 35%
+  &__title
+    font-size: 42px
+    line-height: 1
+    color: $primaryColor
+    span
+      color: $fontColor
+
+  &__right
+    flex: 1 1 65%
+
+  &__slide
+    margin-right: 10%
+    display: flex
+    align-items: flex-start
+    overflow: hidden
+    img
+      display: inline-block !important
+      max-width: 120px
+      width: auto !important
+
+    &__content
+      display: inline-block
+    &__rating
+      margin-bottom: 20px
+      .ico
+        margin-right: 5px
+    &__title
+      font-size: 16px
+      margin-bottom: 10px
+    &__review
+      font-family: 'Flama-Basic'
+      font-size: 14px
+    &__author
+      font-size: 16px
+      margin-top: 20px
+    .btn--green
+      color: white
+      min-width: auto
+      margin-top: 20px
+
+
+
+// FOOTER
+.footer
+  background: $primaryColor
+  padding-bottom: 130px
+  &__cta
+    display: flex
+    justify-content: center
+    &__item
+      display: inline-block
+      background: #101511
+      padding: 30px
+      padding-bottom: 20px
+      transition: background .3s ease-in-out
+      .ico
+        vertical-align: top
+        margin-right: 10px
+      &:hover
+        background: color(#101511 a(80%))
+    &__desc
+      display: inline-block
+      font-size: 18px
+      color: white
+      span
+        margin-top: 5px
+        display: block
+        font-size: 12px
+        color: $primaryColor
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 60px
+    &:last-child
+      margin-top: 20px
+  &__left
+    flex: 1 1 28%
+  &__center
+    flex: 1 1 47%
+    padding-right: 20px
+    padding-left: 15px
+  &__right
+    flex: 1 1 25%
+  &__links
+    &__wrapper
+      display: flex
+    display: inline-block
+    text-transform: uppercase
+    margin-right: 100px
+    &:last-child
+      margin-right: 0
+    a
+      display: block
+      margin-bottom: 15px
+      transition: color .3s ease
+      &:hover
+        color: white
+
+  &__newsleter
+    &__title
+      font-size: 24px
+      line-height: 1
+      span
+        display: block
+        color: white
+    form
+      margin-top: 20px
+
+  &__socials
+    margin-top: 10px
+    .ico
+      size: 35px
+      margin-right: 30px
+      &:hover
+        opacity: .7
+
+  &__copy
+    text-transform: uppercase
+    font-size: 12px
+  &__secondaryLinks
+    display: flex
+    justify-content: space-between
+    text-transform: uppercase
+    a
+      display: block
+      flex: 1
+      transition: color .3s ease
+      &:hover
+        color: white
+
+
+
+// UI
+.ui-input-group
+  position: relative
+  text-transform: uppercase
+  input
+    height: 50px
+    font-family: 'Flama-Basic'
+    font-size: 17px
+    background: transparent
+    display: block
+    padding: 13px 20px
+    border: 1px solid #101511
+    width: 100%
+    transition: all .4s ease-in-out
+    &::placeholder
+      color: $fontColor
+    &:focus
+      outline: none
+      box-shadow: 0px 2px 6px color(black a(30%))
+
+  button
+    border: none
+    box-shadow: none
+    height: 48px
+    background: #101511
+    color: white
+    position: absolute
+    top: 1px
+    right: 0
+    padding: 13px 15px
+    font-size: 22px
+    cursor: pointer
+    transition: all .3s ease-in-out
+    &:hover
+      background: white
+      color: $primaryColor
+    &:focus
+      outline: none
+
+
+.testimonials__left
+  position: relative
+  .owl-next, .owl-prev
+    margin-top: 30px
+    display: inline-block
+    position: relative
+    content: ' '
+    background-repeat: no-repeat
+    font-size: 0
+    background-size: cover
+    background-image: svg-load('../../images/svg/owl-nav.svg', stroke=#000)
+    size: 20px 35px
+    margin-right: 40px
+    cursor: pointer
+    &:hover
+      background-image: svg-load('../../images/svg/owl-nav.svg', stroke=$primaryColor)
+
+  .owl-next
+    transform: rotate(180deg)
