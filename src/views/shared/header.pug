@@ -3,7 +3,7 @@ header.header.header--absolute
   .container
     .header__wrapper
       .header__hamburger
-        button.hamburger.hamburger--spin(type='button')
+        button.hamburger.hamburger--spin#openHamburger(type='button')
           span.hamburger-box
             span.hamburger-inner
 
@@ -31,14 +31,18 @@ header.header.header--absolute
 
 // MOBILE NAV
 .mobile-navi
-  ul
-    li
-      a(href='#') PRODUCTS
-    li
-      a(href='#') APPAREL
-    li
-      a(href='#') TESTIMONIALS
-    li
-      a(href='#') NEWS
-    li
-      a(href='#') CONTACT
+  .mobile-navi__wrapper
+    button.hamburger.hamburger--spin#closeHamburger(type='button')
+      span.hamburger-box
+        span.hamburger-inner
+    ul
+      li
+        a(href='#') PRODUCTS
+      li
+        a(href='#') APPAREL
+      li
+        a(href='#') TESTIMONIALS
+      li
+        a(href='#') NEWS
+      li
+        a(href='#') CONTACT

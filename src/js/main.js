@@ -63,10 +63,18 @@ $(document).ready(function(){
   initialize();
 
   // Mobile hamburger
-  $('.hamburger').on('click', function(){
-    $(this).toggleClass('is-active');
-    $('.mobile-navi').toggleClass('is-active');
-    $('body').toggleClass('locked');
+  $('#openHamburger').on('click', function(){
+    $(this).addClass('is-active');
+    $('.mobile-navi').addClass('is-active');
+    $('body').addClass('locked');
+    $('#closeHamburger').addClass('is-active');
+  });
+
+  $('#closeHamburger').on('click', function(){
+    $(this).removeClass('is-active');
+    $('.mobile-navi').removeClass('is-active');
+    $('body').removeClass('locked');
+    $('#openHamburger').removeClass('is-active');
   });
 
 

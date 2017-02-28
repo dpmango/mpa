@@ -19,7 +19,7 @@
         <div class="container">
           <div class="header__wrapper">
             <div class="header__hamburger">
-              <button class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+              <button class="hamburger hamburger--spin" id="openHamburger" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
             </div><a class="header__logo" href="#">
               <div class="icoWrap"><i class="ico ico-logo"></i></div></a>
             <ul class="header__navi">
@@ -37,13 +37,16 @@
       </header>
       <!-- MOBILE NAV-->
       <div class="mobile-navi">
-        <ul>
-          <li><a href="#">PRODUCTS</a></li>
-          <li><a href="#">APPAREL</a></li>
-          <li><a href="#">TESTIMONIALS</a></li>
-          <li><a href="#">NEWS</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
+        <div class="mobile-navi__wrapper">
+          <button class="hamburger hamburger--spin" id="closeHamburger" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+          <ul>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">APPAREL</a></li>
+            <li><a href="#">TESTIMONIALS</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
       </div>
       <div class="site__content">
         <!-- HERO :: START-->
